@@ -1,6 +1,7 @@
 # ai-longitudinal-lab-synthesizer
 
-[![Test Coverage](https://github.com/loponly/ai-longitudinal-lab-synthesizer/actions/workflows/test-coverage.yml/badge.svg?branch=master)](https://github.com/loponly/ai-longitudinal-lab-synthesizer/actions/workflows/test-coverage.yml)
+[![Test and Coverage](https://github.com/loponly/ai-longitudinal-lab-synthesizer/actions/workflows/test-coverage.yml/badge.svg)](https://github.com/loponly/ai-longitudinal-lab-synthesizer/actions/workflows/test-coverage.yml)
+
 
 
 [![codecov](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer/branch/main/graph/badge.svg)](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer)
