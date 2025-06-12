@@ -65,6 +65,22 @@ This project synthesizes de-identified lab data into clinically relevant health 
 - PHI detection & logging for HIPAA/GDPR compliance
 - Unit-tested pipelines and CHR run tracing
 
+## 🧱 Code Standards
+
+- ✅ SOLID Principles
+- 🎯 Clean Architecture (modular, testable)
+- 🧪 90%+ test coverage via pytest
+- 🧼 Lint: ruff / Format: black / Type-check: mypy
+- 📖 Every function/class must include type hints and docstrings
+- 🔒 Secure (no secrets in code, validate all inputs)
+
+Run locally:
+```bash
+black src/ tests/
+ruff src/ tests/
+mypy src/
+pytest
+
 ## 🧰 Tech Stack
 
 - **Langroid**, **loinc-tools**, **TSFresh**
