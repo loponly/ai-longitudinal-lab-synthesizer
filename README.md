@@ -3,6 +3,10 @@
 [![Test Coverage](https://github.com/loponly/ai-longitudinal-lab-synthesizer/actions/workflows/test-coverage.yml/badge.svg?branch=master)](https://github.com/loponly/ai-longitudinal-lab-synthesizer/actions/workflows/test-coverage.yml)
 
 
+[![codecov](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer/branch/main/graph/badge.svg)](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer)
+
+
+
 🧪 AI-Driven Longitudinal Lab Report Synthesizer
 
 This project synthesizes de-identified lab data into clinically relevant health summaries, supporting biomarker normalization, LOINC mapping, health-area classification, and LaTeX/Markdown rendering. It includes agent-based orchestration using Langroid, unit testing, and PDF parser configuration with privacy compliance.
