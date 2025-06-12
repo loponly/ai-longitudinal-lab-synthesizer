@@ -40,21 +40,21 @@ def main():
     print("🧪 AI Longitudinal Lab Report Synthesizer")
     print("=" * 50)
 
-    print("\\n📥 Example Input:")
+    print("\n📥 Example Input:")
     print(json.dumps(example_input, indent=2))
 
     # Initialize synthesizer
     synthesizer = LabDataSynthesizer()
 
     # Process the data
-    print("\\n🔄 Processing lab data...")
+    print("\n🔄 Processing lab data...")
     result = synthesizer.synthesize_to_formats(example_input)
 
-    print("\\n📄 Generated Report (Markdown):")
+    print("\n📄 Generated Report (Markdown):")
     print("-" * 40)
     print(result["markdown"])
 
-    print("\\n\\n📊 Expected Output (from README):")
+    print("\n\n📊 Expected Output (from README):")
     print("-" * 40)
     expected_output = '''## Patient Summary - ID: PT123456
 
@@ -71,7 +71,7 @@ def main():
 
     print(expected_output)
 
-    print("\\n\\n🔍 Comparison Analysis:")
+    print("\n\n🔍 Comparison Analysis:")
     print("-" * 40)
 
     # Compare key elements
