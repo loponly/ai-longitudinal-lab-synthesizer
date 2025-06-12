@@ -1,14 +1,15 @@
 """Data models for lab results and patient data."""
 from dataclasses import dataclass
 from datetime import datetime
-from typing import List, Optional, Dict, Any
 from enum import Enum
+from typing import List, Optional
 
 
 class HealthDomain(Enum):
     """Health domains for lab result classification."""
+
     RENAL = "Renal"
-    ENDOCRINE = "Endocrine"  
+    ENDOCRINE = "Endocrine"
     CARDIOVASCULAR = "Cardiovascular"
     HEMATOLOGY = "Hematology"
     LIVER = "Liver"
@@ -21,6 +22,7 @@ class HealthDomain(Enum):
 @dataclass
 class LabResult:
     """Individual lab test result."""
+
     test_name: str
     value: float
     unit: str
@@ -28,7 +30,7 @@ class LabResult:
     loinc_code: Optional[str] = None
     reference_range: Optional[str] = None
     health_domain: Optional[HealthDomain] = None
-    
+
     def __post_init__(self) -> None:
         """Validate and normalize data after initialization."""
         if isinstance(self.date, str):
@@ -39,12 +41,13 @@ class LabResult:
                 raise ValueError(f"Invalid date format: {self.date}. Expected YYYY-MM-DD")
 
 
-@dataclass 
+@dataclass
 class PatientData:
     """Patient lab data collection."""
+
     patient_id: str
     labs: List[LabResult]
-    
+
     def __post_init__(self) -> None:
         """Convert dict labs to LabResult objects if needed."""
         converted_labs = []
@@ -59,12 +62,13 @@ class PatientData:
 @dataclass
 class ReferenceRange:
     """Reference ranges for lab values."""
+
     test_name: str
     min_value: Optional[float]
     max_value: Optional[float]
     unit: str
     population: str = "adult"
-    
+
     def is_normal(self, value: float) -> bool:
         """Check if a value is within normal range."""
         if self.min_value is not None and value < self.min_value:
@@ -72,7 +76,7 @@ class ReferenceRange:
         if self.max_value is not None and value > self.max_value:
             return False
         return True
-    
+
     def get_status(self, value: float) -> str:
         """Get status indicator (↑, ↓, or normal)."""
         if self.is_normal(value):
@@ -87,15 +91,17 @@ class ReferenceRange:
 @dataclass
 class HealthSummary:
     """Health domain summary for a patient."""
+
     domain: HealthDomain
     lab_results: List[LabResult]
     trends: Optional[str] = None
     recommendations: Optional[str] = None
-    
-    
+
+
 @dataclass
 class PatientSummary:
     """Complete patient health summary."""
+
     patient_id: str
     health_summaries: List[HealthSummary]
     overall_summary: Optional[str] = None

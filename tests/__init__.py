@@ -1,6 +1,7 @@
 """Test utilities and fixtures for the lab synthesizer tests."""
 import pytest
-from src.models import LabResult, PatientData, HealthDomain
+
+from src.models import HealthDomain, LabResult, PatientData
 
 
 @pytest.fixture
@@ -14,7 +15,7 @@ def sample_lab_result():
     )
 
 
-@pytest.fixture 
+@pytest.fixture
 def sample_patient_data():
     """Sample patient data from README example."""
     return PatientData(

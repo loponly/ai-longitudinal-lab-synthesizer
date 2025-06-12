@@ -1,13 +1,13 @@
 """Basic functionality tests."""
-import sys
 import os
-import pytest
+import sys
 
 # Add the project root to the Python path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.models import LabResult, PatientData, HealthDomain
+from src.models import LabResult
 from src.synthesizer import LabDataSynthesizer
+
 
 def test_lab_result_creation():
     """Test basic lab result creation."""
@@ -33,10 +33,10 @@ def test_readme_example():
             {"test_name": "Fasting Glucose", "value": 120, "unit": "mg/dL", "date": "2023-11-01"}
         ]
     }
-    
+
     synthesizer = LabDataSynthesizer()
     results = synthesizer.synthesize_to_formats(example_input)
-    
+
     # Check basic structure
     assert "markdown" in results
     assert "PT123456" in results["markdown"]
