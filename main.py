@@ -54,7 +54,7 @@ def main():
     print("-" * 40)
     print(result["markdown"])
 
-        print("\\n\\n📊 Expected Output (from README):")
+    print("\\n\\n📊 Expected Output (from README):")
     print("-" * 40)
     expected_output = '''## Patient Summary - ID: PT123456
 
