@@ -4,7 +4,8 @@
 
 
 
-[![codecov](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer/branch/main/graph/badge.svg)](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer)
+[![codecov](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer/graph/badge.svg?token=WQ752UURHY)](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer)
+
 
 
 
