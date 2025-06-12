@@ -67,7 +67,8 @@ def main():
 - **HbA1c**: 7.2% ↑ (Pre-Diabetic > 6.5%)
 - **Fasting Glucose**: 120 mg/dL ↑
 
-🧠 **Summary**: Patient trending toward early CKD and pre-diabetes. Recommend follow-up testing and nephrology referral.'''
+🧠 **Summary**: Patient trending toward early CKD and pre-diabetes. 
+Recommend follow-up testing and nephrology referral.'''
 
     print(expected_output)
 
@@ -80,11 +81,20 @@ def main():
 
     print("✅ Patient ID match:", "PT123456" in result["markdown"])
     print("✅ Renal domain included:", "Renal" in result["markdown"])
-    print("✅ Endocrine domain included:", "Endocrine" in result["markdown"] or "Endocrinology" in result["markdown"])
-    print("✅ Creatinine elevated (↑):", "Creatinine" in result["markdown"] and "↑" in result["markdown"])
-    print("✅ eGFR decreased (↓):", "eGFR" in result["markdown"] and "↓" in result["markdown"])
-    print("✅ HbA1c elevated (↑):", "HbA1c" in result["markdown"] and "↑" in result["markdown"])
-    print("✅ Overall summary present:", "Summary" in result["markdown"] and ("CKD" in result["markdown"] or "diabetes" in result["markdown"]))
+    print("✅ Endocrine domain included:", 
+          "Endocrine" in result["markdown"] or 
+          "Endocrinology" in result["markdown"])
+    print("✅ Creatinine elevated (↑):", 
+          "Creatinine" in result["markdown"] and "↑" in result["markdown"])
+    print("✅ eGFR decreased (↓):", 
+          "eGFR" in result["markdown"] and "↓" in result["markdown"])
+    print("✅ HbA1c elevated (↑):", 
+          "HbA1c" in result["markdown"] and "↑" in result["markdown"])
+    print("✅ Overall summary present:", 
+          "Summary" in result["markdown"] and 
+          ("CKD" in result["markdown"] or "diabetes" in result["markdown"]))
+
+    return result
 
     return result
 

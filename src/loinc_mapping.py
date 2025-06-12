@@ -1,6 +1,5 @@
 """LOINC mapping and biomarker normalization utilities."""
-from typing import Dict, Optional, ClassVar
-from dataclasses import dataclass
+from typing import ClassVar, Dict, Optional
 
 from src.models import LabResult, ReferenceRange
 

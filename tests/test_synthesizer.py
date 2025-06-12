@@ -13,7 +13,7 @@ class TestLabDataSynthesizer:
     @pytest.fixture
     def synthesizer(self):
         """Create synthesizer instance."""
-        return LabDataSynthesizer()
+        return LabDataSynthesizer(use_mock=True)
 
     @pytest.fixture
     def sample_patient_data(self):

@@ -19,7 +19,7 @@ def test_lab_result_creation():
 
 def test_synthesizer_creation():
     """Test synthesizer creation."""
-    synthesizer = LabDataSynthesizer()
+    synthesizer = LabDataSynthesizer(use_mock=True)
     assert synthesizer is not None
 
 def test_readme_example():
@@ -34,7 +34,7 @@ def test_readme_example():
         ]
     }
 
-    synthesizer = LabDataSynthesizer()
+    synthesizer = LabDataSynthesizer(use_mock=True)
     results = synthesizer.synthesize_to_formats(example_input)
 
     # Check basic structure

@@ -1,5 +1,5 @@
 """Health area classification using rules and patterns."""
-from typing import Dict, List, ClassVar
+from typing import ClassVar, Dict, List
 
 from src.models import HealthDomain, LabResult
 

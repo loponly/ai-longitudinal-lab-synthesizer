@@ -4,9 +4,11 @@ target-version = ['py39']
 
 [tool.ruff]
 line-length = 88
-select = ["E", "F", "I", "W", "C90", "D", "PL", "N", "RUF"]
-ignore = ["D203", "D213"]
 exclude = []
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "C90", "D", "PL", "N", "RUF"]
+ignore = ["D203", "D213", "PLR2004"]  # PLR2004 = magic value comparison
 
 [tool.mypy]
 strict = true

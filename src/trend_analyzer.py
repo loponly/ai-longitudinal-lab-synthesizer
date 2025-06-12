@@ -111,7 +111,7 @@ class TrendAnalyzer:
                 trends.append("Pre-diabetic range")
                 recommendations.append("lifestyle modifications and monitoring")
         return trends
-    
+
     @staticmethod
     def _analyze_glucose_levels(glucose_labs: List[LabResult], recommendations: List[str]) -> List[str]:
         """Analyze glucose levels and add recommendations."""

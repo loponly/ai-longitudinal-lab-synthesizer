@@ -1,5 +1,6 @@
 """Integration tests for the complete lab synthesizer system."""
 import json
+import time
 
 import pytest
 
@@ -44,7 +45,7 @@ class TestIntegration:
 
     def test_readme_example_end_to_end(self, readme_example_input):
         """Test the complete pipeline with README example."""
-        synthesizer = LabDataSynthesizer()
+        synthesizer = LabDataSynthesizer(use_mock=True)
         results = synthesizer.synthesize_to_formats(readme_example_input)
 
         # Check that all formats are generated
@@ -109,7 +110,7 @@ class TestIntegration:
             ]
         }
 
-        synthesizer = LabDataSynthesizer()
+        synthesizer = LabDataSynthesizer(use_mock=True)
         results = synthesizer.synthesize_to_formats(comprehensive_input)
 
         markdown_report = results["markdown"]
@@ -142,7 +143,7 @@ class TestIntegration:
             ]
         }
 
-        synthesizer = LabDataSynthesizer()
+        synthesizer = LabDataSynthesizer(use_mock=True)
         results = synthesizer.synthesize_to_formats(normal_input)
 
         markdown_report = results["markdown"]
@@ -165,7 +166,7 @@ class TestIntegration:
             ]
         }
 
-        synthesizer = LabDataSynthesizer()
+        synthesizer = LabDataSynthesizer(use_mock=True)
 
         with pytest.raises(ValueError, match="Invalid date format"):
             synthesizer.synthesize_to_formats(invalid_input)
@@ -180,7 +181,7 @@ class TestIntegration:
             ]
         }
 
-        synthesizer = LabDataSynthesizer()
+        synthesizer = LabDataSynthesizer(use_mock=True)
         results = synthesizer.synthesize_to_formats(input_data)
 
         # Test that JSON result can be serialized
@@ -200,8 +201,6 @@ class TestIntegration:
 
     def test_performance_with_large_dataset(self):
         """Test performance with a larger dataset."""
-        import time
-
         # Create a larger dataset
         large_input = {
             "patient_id": "PT888888",
@@ -218,7 +217,7 @@ class TestIntegration:
                 "date": "2023-11-01"
             })
 
-        synthesizer = LabDataSynthesizer()
+        synthesizer = LabDataSynthesizer(use_mock=True)
 
         start_time = time.time()
         results = synthesizer.synthesize_to_formats(large_input)
