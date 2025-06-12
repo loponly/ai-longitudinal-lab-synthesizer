@@ -83,7 +83,7 @@ pytest
 
 ## 🧰 Tech Stack
 
-- **Langroid**, **loinc-tools**, **TSFresh**
+- **Langroid**, **TSFresh**
 - **pdfplumber**, **PyMuPDF**
 - **pytest**, **Docker**, **Streamlit**
 - **UCUM units**, **pandoc**, **Flask API**

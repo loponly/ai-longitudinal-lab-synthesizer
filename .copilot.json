@@ -2,6 +2,7 @@
     "suggestionBehavior": "includeComments",
     "prompt": [
         "# Follow these rules:",
+        "# 0. Always read relevant documents from docs folder first to understand context and requirements.",
         "# 1. Apply SOLID principles (SRP, OCP, LSP, ISP, DIP).",
         "# 2. Use design patterns when appropriate (Factory, Strategy, etc).",
         "# 3. All functions/classes must include type hints and docstrings.",
