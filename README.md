@@ -350,6 +350,11 @@ For more complex logic, you can compose agents in a tree structure, where each a
 - [Agent Tree Example](docs/langroid/examples/agent-tree.md)
 - [Langroid Documentation](https://langroid.github.io/langroid/)
 
+## 👤 Author
+
+**Enkhbat E**  
+📧 Email: enkhbat@em4it.com
+
 ---
 
 © 2025 – AI Clinical Synth Labs
