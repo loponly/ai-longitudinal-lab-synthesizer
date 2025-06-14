@@ -3,7 +3,6 @@
 [![Test and Coverage](https://github.com/loponly/ai-longitudinal-lab-synthesizer/actions/workflows/test-coverage.yml/badge.svg)](https://github.com/loponly/ai-longitudinal-lab-synthesizer/actions/workflows/test-coverage.yml)
 
 
-
 [![codecov](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer/graph/badge.svg?token=WQ752UURHY)](https://codecov.io/gh/loponly/ai-longitudinal-lab-synthesizer)
 
 
